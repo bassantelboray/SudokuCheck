@@ -1,9 +1,22 @@
 package org.kotlin.unlimited
 
 fun main() {
-    val validBoard = Array(5) { CharArray(5) }
+    val validBoard = arrayOf(
+        charArrayOf('1', '2', '3', '4'),
+        charArrayOf('3', '4', '1', '2'),
+        charArrayOf('2', '1', '4', '3'),
+        charArrayOf('4', '3', '2', '1')
 
-    println(isValidSudoku(validBoard))
+    )
+    val invalidBoard = arrayOf(
+        charArrayOf('1', '2', '3', '4'),
+        charArrayOf('3', '4', '1', '2'),
+        charArrayOf('2', '1', '4', '3'),
+        charArrayOf('4', '3', '2', '4')
+    )
+
+    println("Valid Board: ${isValidSudoku(validBoard)}")
+    println("Invalid Board: ${isValidSudoku(invalidBoard)}")
 
 }
 
